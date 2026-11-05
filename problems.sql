@@ -56,3 +56,39 @@ INSERT INTO Employees VALUES
 -- inner join Departments d
 -- on e.DepartmentID = d.DepartmentID
 -- where e.Salary > 6000
+
+
+
+-- LEFT JOIN
+
+-- problem 5: Select all employees with their department names, including those without a department.
+
+-- select e.Name, d.DepartmentName
+-- from Employees e
+-- left join Departments d
+-- on e.DepartmentID = d.DepartmentID
+
+-- problem 6: Select all employees without a department.
+
+-- select e.Name
+-- from Employees e
+-- left join Departments d
+-- on e.DepartmentID = d.DepartmentID
+-- where e.DepartmentID is null
+
+-- problem 7: Select all departments with the total number of employees in each department.
+
+-- select d.DepartmentName,
+--   count(e.EmployeeID) as Total
+-- from Departments d
+-- left join Employees e
+-- on e.DepartmentID = d.DepartmentID 
+-- group by d.DepartmentName
+
+-- problem 8: Select all departments without any employees.
+
+-- select d.DepartmentName 
+-- from Departments d
+-- left join Employees e
+-- on d.DepartmentID = e.DepartmentID
+-- where e.DepartmentID is null
