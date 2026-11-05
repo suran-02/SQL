@@ -92,3 +92,25 @@ INSERT INTO Employees VALUES
 -- left join Employees e
 -- on d.DepartmentID = e.DepartmentID
 -- where e.DepartmentID is null
+
+
+-- GROUP BY
+
+-- select d.DepartmentName, ROUND(AVG(e.Salary),2) as avg_salary
+-- from Departments d
+-- left join Employees e
+-- on d.DepartmentID = e.DepartmentID
+-- group by d.DepartmentName
+
+-- select d.DepartmentName, MAX(e.Salary) as highest_salary
+-- from Departments d
+-- left join Employees e
+-- on d.DepartmentID = e.DepartmentID
+-- group by d.DepartmentName
+
+-- select d.DepartmentName, max(e.Salary)-min(e.Salary) as diff_salary
+-- from Employees e
+-- inner join Departments d
+-- on e.DepartmentID = d.DepartmentID
+-- group by d.DepartmentName
+
